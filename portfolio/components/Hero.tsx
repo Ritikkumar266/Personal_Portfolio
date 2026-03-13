@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiArrowDown } from 'react-icons/hi';
 import Image from 'next/image';
 
@@ -39,7 +39,7 @@ export default function Hero() {
               {/* Profile Image */}
               <div className="absolute inset-2 rounded-full overflow-hidden border-4 border-gray-900">
                 <Image
-                  src="/profile.jpg"
+                  src="/ritik.jpg"
                   alt="Ritik Kumar"
                   fill
                   className="object-cover"
@@ -74,7 +74,7 @@ export default function Hero() {
             >
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-left">
                 Hi, I'm <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Ritik Kumar</span> 👋
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Ritik Kumar Barnwal</span> 👋
               </h1>
             </motion.div>
 
@@ -93,7 +93,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-lg mt-4 text-gray-500 text-left"
             >
-              Building modern web experiences with cutting-edge technologies
+              I enjoy building web applications and bringing ideas to life through code. Constantly learning new technologies and improving my skills to grow as a developer. 🚀
             </motion.p>
 
             <motion.div
@@ -122,14 +122,11 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 1 }}
               className="mt-8 flex gap-6 justify-start text-2xl"
             >
-              <a href="https://github.com/ritikkumar" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
+              <a href="https://github.com/Ritikkumar266" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
                 <FaGithub />
               </a>
-              <a href="https://linkedin.com/in/ritikkumar" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
+              <a href="https://www.linkedin.com/in/ritik-kumar-8a8980289/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
                 <FaLinkedin />
-              </a>
-              <a href="https://twitter.com/ritikkumar" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors">
-                <FaTwitter />
               </a>
             </motion.div>
           </div>

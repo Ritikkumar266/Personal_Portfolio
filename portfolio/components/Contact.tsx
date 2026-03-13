@@ -21,7 +21,7 @@ export default function Contact() {
   const contactInfo = [
     { icon: <FaEnvelope />, label: 'Email', value: 'ritik2662004@gmail.com' },
     { icon: <FaPhone />, label: 'Phone', value: '+91 9304649343' },
-    { icon: <FaMapMarkerAlt />, label: 'Location', value: 'India' },
+    { icon: <FaMapMarkerAlt />, label: 'Location', value: 'Punjab, India - Open to Relocate' },
   ];
 
   return (

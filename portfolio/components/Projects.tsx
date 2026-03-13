@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Image from 'next/image';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 export default function Projects() {
@@ -12,23 +13,26 @@ export default function Projects() {
   const projects = [
     {
       title: "Kreeda AI",
-      desc: "AI-powered platform for intelligent task automation and workflow optimization with machine learning capabilities",
-      tags: ["AI", "Python", "React", "Node.js"],
-      github: "#",
+      desc: "A web-based AI assistant designed to answer sports-related queries.",
+      tags: ["Python", "Streamlit", "JavaScript", "Tailwind CSS", "Firebase Authentication", "Gemini API"],
+      image: "/kreeda.png",
+      github: "https://github.com/Ritikkumar266/Kreeda-ai-chatbot-ritik",
       demo: "#"
     },
     {
       title: "Pixel Craft",
-      desc: "Creative design tool for digital artists with real-time collaboration and advanced editing features",
-      tags: ["React", "Canvas API", "WebSocket", "Express"],
-      github: "#",
+      desc: "An innovative platform designed to bridge the gap between photographers and clients by streamlining studio bookings and operations.",
+      tags: ["HTML", "CSS", "Tailwind", "JavaScript", "jQuery", "PHP", "MySQL"],
+      image: "/pixelcraft.png",
+      github: "https://github.com/Ritikkumar266/PixelCraft-Studio",
       demo: "#"
     },
     {
       title: "AgroGuard",
-      desc: "Comprehensive crop protection platform built with MERN stack featuring disease detection and prevention",
-      tags: ["React", "Node.js", "MongoDB", "Express"],
-      github: "#",
+      desc: "A full-stack web application for identifying and managing insect pests in agricultural crops.",
+      tags: ["JavaScript", "HTML5", "CSS3", "React", "Node.js", "Express", "MongoDB"],
+      image: "/agroguard.png",
+      github: "https://github.com/Ritikkumar266/Insect-Pest-Management",
       demo: "#"
     }
   ];
@@ -57,8 +61,17 @@ export default function Projects() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-blue-500"
             >
-              <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center">
-                <div className="text-6xl">💻</div>
+              <div className="relative h-48 bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center overflow-hidden">
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="text-6xl">💻</div>
+                )}
               </div>
               
               <div className="p-6">
@@ -73,18 +86,14 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex justify-center">
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 text-gray-400 hover:text-blue-500 transition-colors"
                   >
                     <FaGithub /> Code
-                  </a>
-                  <a
-                    href={project.demo}
-                    className="flex items-center gap-2 text-gray-400 hover:text-blue-500 transition-colors"
-                  >
-                    <FaExternalLinkAlt /> Demo
                   </a>
                 </div>
               </div>

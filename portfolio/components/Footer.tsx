@@ -1,6 +1,6 @@
 'use client';
 
-import { FaGithub, FaLinkedin, FaTwitter, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,14 +11,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
             <p className="text-gray-400">
-              © {currentYear} Ritik Kumar. Built with{' '}
-              <FaHeart className="inline text-red-500" /> using Next.js
+              © {currentYear} Ritik Kumar
             </p>
           </div>
 
           <div className="flex gap-6 text-2xl">
             <a
-              href="https://github.com/ritikkumar"
+              href="https://github.com/Ritikkumar266"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 transition-colors"
@@ -26,20 +25,12 @@ export default function Footer() {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/ritikkumar"
+              href="https://www.linkedin.com/in/ritik-kumar-8a8980289/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 transition-colors"
             >
               <FaLinkedin />
-            </a>
-            <a
-              href="https://twitter.com/ritikkumar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-blue-500 transition-colors"
-            >
-              <FaTwitter />
             </a>
           </div>
         </div>

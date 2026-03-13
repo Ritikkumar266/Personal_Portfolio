@@ -1,21 +1,23 @@
-import Image from "next/image";
-import React from "react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Education from "@/components/Education";
+import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
-const Hero = () => {
+export default function Home() {
   return (
-    <section className="bg-gradient-to-r from-blue-500 to-purple-600 text-white h-screen flex flex-col justify-center items-center">
-      <h1 className="text-5xl md:text-7xl font-bold mb-4">Welcome to My Portfolio</h1>
-      <p className="text-lg md:text-2xl mb-6">
-        I am a passionate developer creating modern web experiences.
-      </p>
-      <a
-        href="#about"
-        className="bg-white text-blue-500 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition"
-      >
-        Learn More
-      </a>
-    </section>
+    <main>
+      <Navbar />
+      <Hero />
+      <About />
+      <Education />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+    </main>
   );
-};
-
-export default Hero;
+}

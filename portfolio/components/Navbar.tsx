@@ -70,7 +70,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.95 }}
           >
             <span className="text-3xl font-bold text-white">
-              RK
+              RKB
               <span className="text-blue-500">.</span>
             </span>
             <motion.div
@@ -115,8 +115,8 @@ export default function Navbar() {
             
             {/* Resume Button */}
             <motion.a
-              href="/resume.pdf"
-              download
+              href="/cv ritik_.pdf"
+              download="Ritik_Kumar_CV.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="ml-4 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300"
@@ -174,8 +174,8 @@ export default function Navbar() {
               
               {/* Mobile Resume Button */}
               <motion.a
-                href="/resume.pdf"
-                download
+                href="/cv ritik_.pdf"
+                download="Ritik_Kumar_CV.pdf"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: navLinks.length * 0.1 }}
