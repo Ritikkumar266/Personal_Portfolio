@@ -37,6 +37,8 @@ export default function Navbar() {
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Resume', href: '/resume' },
+    { name: 'Certificates', href: '/certificates' },
   ];
 
   const handleNavClick = (href: string) => {
@@ -84,14 +86,18 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-1">
             {navLinks.map((link) => {
-              const isActive = activeSection === link.href.substring(1);
+              const isActive = link.href.startsWith('#') 
+                ? activeSection === link.href.substring(1)
+                : false;
               return (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(link.href);
+                    if (link.href.startsWith('#')) {
+                      e.preventDefault();
+                      handleNavClick(link.href);
+                    }
                   }}
                   className="relative px-4 py-2 text-gray-300 hover:text-white transition-colors duration-300 group"
                 >
@@ -112,17 +118,6 @@ export default function Navbar() {
                 </a>
               );
             })}
-            
-            {/* Resume Button */}
-            <motion.a
-              href="/resume"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="ml-4 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300"
-            >
-              <FaDownload className="text-sm" />
-              Resume
-            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -148,14 +143,19 @@ export default function Navbar() {
           >
             <div className="px-4 py-6 space-y-3">
               {navLinks.map((link, index) => {
-                const isActive = activeSection === link.href.substring(1);
+                const isActive = link.href.startsWith('#') 
+                  ? activeSection === link.href.substring(1)
+                  : false;
                 return (
                   <motion.a
                     key={link.name}
                     href={link.href}
                     onClick={(e) => {
-                      e.preventDefault();
-                      handleNavClick(link.href);
+                      if (link.href.startsWith('#')) {
+                        e.preventDefault();
+                        handleNavClick(link.href);
+                      }
+                      setIsOpen(false);
                     }}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -170,19 +170,6 @@ export default function Navbar() {
                   </motion.a>
                 );
               })}
-              
-              {/* Mobile Resume Button */}
-              <motion.a
-                href="/cv ritik_.pdf"
-                download="Ritik_Kumar_CV.pdf"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: navLinks.length * 0.1 }}
-                className="block px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold text-center flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-blue-500/50 transition-all"
-              >
-                <FaDownload />
-                Download Resume
-              </motion.a>
             </div>
           </motion.div>
         )}
