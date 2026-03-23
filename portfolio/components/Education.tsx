@@ -23,7 +23,7 @@ export default function Education() {
       field: "Science Stream",
       institution: "JVM Shayamli Public School",
       location: "Ranchi, Jharkhand",
-      year: "Apr' 2020 - Mar' 2021",
+      year: "Apr' 2021 - Mar' 2022",
       details: "Percentage: 89%"
     }
   ];

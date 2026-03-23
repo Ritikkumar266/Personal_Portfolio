@@ -84,7 +84,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl md:text-2xl mt-6 text-gray-400 text-left"
             >
-              Full Stack Developer | MERN | Web Development
+              Full Stack Developer
             </motion.p>
 
             <motion.p
