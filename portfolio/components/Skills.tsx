@@ -24,7 +24,7 @@ export default function Skills() {
       ]
     },
     {
-      category: "Frontend Frameworks",
+      category: "Frontend Technologies",
       skills: [
         { name: "HTML", icon: <SiHtml5 /> },
         { name: "CSS", icon: <SiCss /> },
@@ -34,11 +34,16 @@ export default function Skills() {
       ]
     },
     {
-      category: "Backend & Databases",
+      category: "Backend Frameworks",
       skills: [
         { name: "Node.js", icon: <SiNodedotjs /> },
         { name: "Express", icon: <SiExpress /> },
         { name: "Laravel", icon: <SiLaravel /> },
+      ]
+    },
+    {
+      category: "Databases",
+      skills: [
         { name: "MongoDB", icon: <SiMongodb /> },
         { name: "PostgreSQL", icon: <SiPostgresql /> },
         { name: "MySQL", icon: <SiMysql /> },
