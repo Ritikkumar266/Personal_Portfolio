@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { SiJavascript, SiReact, SiNextdotjs, SiNodedotjs, SiMongodb, SiTailwindcss, SiTypescript, SiExpress, SiGit, SiC, SiCplusplus, SiPython, SiPostgresql, SiMysql, SiVsco, SiGithub, SiVercel, SiLaravel, SiHtml5, SiCss3 } from 'react-icons/si';
+import { SiJavascript, SiReact, SiNextdotjs, SiNodedotjs, SiMongodb, SiTailwindcss, SiTypescript, SiExpress, SiGit, SiC, SiCplusplus, SiPython, SiPostgresql, SiMysql, SiVsco, SiGithub, SiVercel, SiLaravel, SiHtml5, SiCss } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
 import { FaBrain, FaUsers, FaSync, FaComments } from 'react-icons/fa';
 
@@ -27,7 +27,7 @@ export default function Skills() {
       category: "Frontend Frameworks",
       skills: [
         { name: "HTML", icon: <SiHtml5 /> },
-        { name: "CSS", icon: <SiCss3 /> },
+        { name: "CSS", icon: <SiCss /> },
         { name: "React", icon: <SiReact /> },
         { name: "Next.js", icon: <SiNextdotjs /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss /> },
